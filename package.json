@@ -1,0 +1,23 @@
+{
+  "name": "node102",
+  "version": "1.0.0",
+  "description": "tutorial?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrinalua/node102.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Sabrina Lua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabrinalua/node102/issues"
+  },
+  "homepage": "https://github.com/sabrinalua/node102#readme"
+}
