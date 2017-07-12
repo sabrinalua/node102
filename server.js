@@ -1,19 +1,30 @@
-var express = require('express'), bodyParser =require('body-parser'),fs=require('fs'), app= express(), sitePath = process.argv[2] || "."; var port = 8000;
+var express = require('express'), 
+bodyParser = require('body-parser'),
+fs = require('fs'), app= express(), 
+sitePath = process.argv[2] || "."; 
+var port = 8000;
 
 var pg = require('pg');
-
+var http = require('http').Server(express);
+var app = express();
 app.use(bodyParser.json());
-// respond with "hello world" when a GET request is made to the homepage
+
 app.get('/', function (req, res) {
   fs.readFile('./view/index.html', function(err,data){
 	res.end(data);
 	});	
 })
 
+//using fs
 app.get('/snake', function (req, res) {
   fs.readFile('./Snake/index.html', function(err,data){
 	res.end(data);
 	});	
+})
+
+//using sendfile
+app.get('/snake2', function (req, res) {
+  res.sendFile(__dirname + '/Snake/index.html');	
 })
 
 /*
