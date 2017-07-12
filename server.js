@@ -24,7 +24,10 @@ app.post('/post', function(req,res){
 })
 
 app.use(express.static(__dirname + '/' + sitePath));
-app.listen(port, function() { 
-    console.log("Server running at: http://localhost:" + port)
-});
+
+app.listen(process.env.PORT || port);
+
+// app.listen(port, function() { 
+//     console.log("Server running at: http://localhost:" + port)
+// });
 
