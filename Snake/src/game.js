@@ -19,6 +19,7 @@ var Game = {
 
 		cursors = game.input.keyboard.createCursorKeys();
 		game.stage.backgroundColor = '#061f27';
+		game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
 		for(var i=0; i<10; i++){
 			snake[i]= game.add.sprite(150+i*squareSize,150, 'snake');
 		}
